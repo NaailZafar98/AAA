@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    overflow-x: hidden; /* This hides horizontal scrollbar */
+    overflow-y: auto; /* This allows vertical scrollbar when needed */
+    overscroll-behavior-x: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*-------------------------------Navbar---------------------*/
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+    height: 40px;
+    
+}
+
+.mobile-icon {
+  float: left; /* Align the icon to the left */
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+.mobile-icon i {
+  font-size: 20px; /* Adjust icon size as needed */
+  color: white; /* Set icon color */
+  margin-top: 10px; /* Adjust vertical alignment */
+}
+
+.navbar-links {
+    float: right;
+    margin-top: 10px;
+}
+
+.navbar-links a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Hover color */
+.navbar-links a:active,
+.navbar-links a.active {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/*-----------------------Grid Images-------------*/
+#choosegadgetssmartwatches {
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* Adjust the gap between grid items */
+}
+
+.grid-item {
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%; /* Set the height equal to the width */
+}
+
+.grid-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:80%;
+  height: 80%;
+  object-fit: cover;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.back-button {
+  background-color: #007bff; /* Change color as per your preference */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
+  margin-left: 50%;
+
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Change color as per your preference */
+}
+
+.back-button::before {
+  content: "\2190"; /* Unicode character for backward arrow */
+  margin-right: 5px;
+}
+
+
+/*----------------------Footer--------------------*/
+
+
+#foot {
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer {
+      background-color: darkgrey;
+      width: 100%;
+      padding: 20px; /* Adjust padding as needed */
+      color: white;
+      text-align: center; /* Center align text */
+      border: 1px solid black;
+    }
+    
+    footer a {
+      text-decoration: none; 
+      color: white; 
+      margin: 0 10px; /* Adjust margin as needed */
+      display: inline-block; /* Display links inline */
+      font-weight: normal; /* Set font weight to normal */
+    }
+    
+    footer a:hover {
+      text-decoration: underline; 
+    }
+    
+    /* Style for copyright section */
+    .copyright {
+      text-align: center; 
+      margin-top: 20px; 
+    }
+    
+    .copyright p {
+      margin: 0; 
+    }
+
+/*-----------Mobile Media Queries------------*/  
+/*----------Navbar--------------*/
+
+@media only screen and (max-width: 541px) {
+  /* Increase the height of the navbar */
+  .navbar {
+      height: 80px;
+  }
+
+  /* Adjust the size of the mobile icons */
+  .mobile-icon i {
+      font-size: 25px;
+  }
+
+  /* Adjust the padding of the navbar links */
+  .navbar-links a {
+      padding: 12px 15px;
+  }
+}
+
+/*-------Grid items-------*/
+@media only screen and (max-width: 541px) {
+  /* Add space between text and image within grid items */
+  #choosegadgetssmartwatches .grid-item p {
+    margin-top: 10px; /* Adjust margin as needed */
+  }
+
+  /* Add space between text and image within grid items */
+  #choosegadgetssmartwatches .grid-container {
+    grid-template-columns: 1fr; /* Stack grid items vertically */
+  }
+
+  /* Adjust grid item width */
+  #choosegadgetssmartwatches .grid-item {
+    width: 100%; /* Set grid item width to full width */
+  }
+}
+
